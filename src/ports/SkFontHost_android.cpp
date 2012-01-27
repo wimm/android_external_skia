@@ -392,11 +392,19 @@ static const char* gSansNames[] = {
 
 static const char* gSerifNames[] = {
     "serif", "times", "times new roman", "palatino", "georgia", "baskerville",
-    "goudy", "fantasy", "cursive", "ITC Stone Serif", NULL
+    "goudy", "fantasy", "ITC Stone Serif", NULL
 };
 
 static const char* gMonoNames[] = {
     "monospace", "courier", "courier new", "monaco", NULL
+};
+
+static const char* gCursiveNames[] = {
+    "cursive", NULL
+};
+
+static const char* gDigitalNames[] = {
+    "digital", NULL
 };
 
 // deliberately empty, but we use the address to identify fallback fonts
@@ -419,7 +427,10 @@ static const FontInitRec gSystemFonts[] = {
         them in the order we want them to be accessed by NextLogicalFont().
      */
     { "DroidSansJapanese.ttf",      gFBNames    },
-    { "DroidSansFallback.ttf",      gFBNames    }
+    { "DroidSansFallback.ttf",      gFBNames    },
+	
+    { "WimmBallpoint.ttf",			gCursiveNames },
+    { "WimmDigital.ttf",			gDigitalNames }
 };
 
 #define DEFAULT_NAMES   gSansNames
